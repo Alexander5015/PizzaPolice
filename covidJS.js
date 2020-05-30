@@ -8,6 +8,7 @@ var countryCode = 0;
 $.get("https://ipinfo.io/json", function(data) {
 	countryCode = data["country"];
 	document.getElementById("statsHere").innerHTML = "COVID-19 Statistics in " + getCountryName(countryCode);
+	getStats(countryCode);
 });
 
 function getStats(countryCode) {

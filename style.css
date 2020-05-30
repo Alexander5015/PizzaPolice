@@ -1,14 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap');
+
 body {
 	margin: 0;
 	color: white;
-	background-color: #1a1a1a;
+	background-color: black;
 	font-family: sans-serif;
 }
 
+h2 {
+	font-family: Montserrat, sans-serif;
+	font-weight: 500;
+}
+
 .header {
-	background-color: #242424;
-	padding: 5px;
-	padding-left: 20px;
+	background-color: #22242a;
+	padding: 10px;
+	text-align: center;
+	font-family: Montserrat, sans-serif;
+	font-weight: 300;
+	font-size: 2.5em;
 }
 
 .content {
@@ -19,21 +29,47 @@ body {
 
 .box {
 	padding: 10px;
-	border: 1px solid #242424;
-	border-radius: 25px;
+	border: 0px solid black;
+	border-radius: 5px;
 	width: 45%;
 	margin: 1%;
 	float: left;
-	background-color: #242424;
+	background-color: #22242a;
 }
 
 .longbox {
 	padding: 10px;
-	border: 1px solid #242424;
-	border-radius: 25px;
+	border: 0px solid black;
+	border-radius: 5px;
 	width: 94%;
 	margin: 1%;
 	float: left;
-	background-color: #242424;	
+	background-color: #22242a;	
 }
+
+.longColorBox {
+	padding: 10px;
+	border: 0px solid black;
+	border-radius: 5px;
+	width: 94%;
+	margin: 1%;
+	float: left;
+	background-image: linear-gradient(-120deg, dodgerblue, darkslateblue);
+}
+
+.longColorBox h2 {
+	float: left;
+	margin: 0;
+	padding: 6px;
+}
+
+.longColorBox a {
+	float: right;
+	border: 1px solid white;
+	border-radius: 50px;
+	padding: 10px;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
 a, a:hover, a:active, a:visited { color: white; }

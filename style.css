@@ -15,3 +15,5 @@ body {
 	text-align: center;
 	padding: 30px;
 }
+
+a, a:hover, a:active, a:visited { color: white; }

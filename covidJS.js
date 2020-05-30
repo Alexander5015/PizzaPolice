@@ -27,6 +27,12 @@ function getStats(countryCode) {
 	});
 }
 
+function tryStatsUpdate() {
+	console.log("Trying to update statistics...");
+	if(countryCode == 0) setTimeout(tryStatsUpdate, 1000);
+	getStats(countryCode);
+}
+
 // Get COVID stats
 $.get("https://api.covid19api.com/summary", function(data) {
 	var worldwideNew = data["Global"]["NewConfirmed"];
@@ -37,10 +43,7 @@ $.get("https://api.covid19api.com/summary", function(data) {
 	document.getElementById("worldwideTotalCases").innerHTML = worldwideTotal + " total cases";
 	document.getElementById("worldwideNewDeaths").innerHTML = worldwideNewDeaths + " new deaths today";
 	document.getElementById("worldwideTotalDeaths").innerHTML = worldwideTotalDeaths + " total deaths";
-	data["Countries"].forEach(function(item, index) {
-		while(countryCode == 0) {}
-		getStats(countryCode);
-	});
+	setTimeout(tryStatsUpdate, 1000);
 });
 
 // Get news

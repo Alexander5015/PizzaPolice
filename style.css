@@ -1,0 +1,17 @@
+body {
+	margin: 0;
+	color: white;
+	background-color: #242424;
+	font-family: sans-serif;
+}
+
+.header {
+	background-color: #1a1a1a;
+	padding: 5px;
+	padding-left: 20px;
+}
+
+.content {
+	text-align: center;
+	padding: 30px;
+}

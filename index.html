@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>PizzaPolice (Alpha)</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div class="header">
+			<h1>PizzaPolice Alpha</h1>
+		</div>
+		<div class="content">
+			<h2>COVID-19 Statistics Worldwide</h2>
+			<p id="worldwideNewCases"></p>
+			<p id="worldwideTotalCases"></p>
+			<p id="worldwideNewDeaths"></p>
+			<p id="worldwideTotalDeaths"></p>
+			<h2 id="statsHere">COVID-19 Statistics Here</h2>
+			<p id="hereNewCases"></p>
+			<p id="hereTotalCases"></p>
+			<p id="hereNewDeaths"></p>
+			<p id="hereTotalDeaths"></p>
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="country.js"></script>
+		<script>
+			// Get user's country
+			var countryCode = 0;
+			$.get("https://ipinfo.io/json", function(data) {
+				countryCode = data["country"];
+				document.getElementById("statsHere").innerHTML = "COVID-19 Statistics in " + getCountryName(countryCode);
+			});
+
+			// Get COVID stats
+			$.get("https://api.covid19api.com/summary", function(data) {
+				var worldwideNew = data["Global"]["NewConfirmed"];
+				var worldwideTotal = data["Global"]["TotalConfirmed"];
+				var worldwideNewDeaths = data["Global"]["NewDeaths"];
+				var worldwideTotalDeaths = data["Global"]["TotalDeaths"];
+				document.getElementById("worldwideNewCases").innerHTML = worldwideNew + " new cases today";
+				document.getElementById("worldwideTotalCases").innerHTML = worldwideTotal + " total cases";
+				document.getElementById("worldwideNewDeaths").innerHTML = worldwideNewDeaths + " new deaths today";
+				document.getElementById("worldwideTotalDeaths").innerHTML = worldwideTotalDeaths + " total deaths";
+				data["Countries"].forEach(function(item, index) {
+					while(countryCode == 0) {}
+					if(item["CountryCode"] == countryCode) {
+						var hereNew = item["NewConfirmed"];
+                                		var hereTotal = item["TotalConfirmed"];
+                                		var hereNewDeaths = item["NewDeaths"];
+                                		var hereTotalDeaths = item["TotalDeaths"];
+                                		document.getElementById("hereNewCases").innerHTML = hereNew + " new cases today";
+                                		document.getElementById("hereTotalCases").innerHTML = hereTotal + " total cases";
+                                		document.getElementById("hereNewDeaths").innerHTML = hereNewDeaths + " new deaths today";
+                                		document.getElementById("hereTotalDeaths").innerHTML = hereTotalDeaths + " total deaths";
+					}
+				});	
+			});
+		</script>
+	</body>
+</html>

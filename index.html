@@ -9,23 +9,42 @@
 			<h1>PizzaPolice Alpha</h1>
 		</div>
 		<div class="content">
-			<h2>COVID-19 Statistics Worldwide</h2>
-			<p id="worldwideNewCases"></p>
-			<p id="worldwideTotalCases"></p>
-			<p id="worldwideNewDeaths"></p>
-			<p id="worldwideTotalDeaths"></p>
-			<h2 id="statsHere">COVID-19 Statistics Here</h2>
-			<p id="hereNewCases"></p>
-			<p id="hereTotalCases"></p>
-			<p id="hereNewDeaths"></p>
-			<p id="hereTotalDeaths"></p>
-			<br>
-			<h2>Check a specific country:</h2>
-			Enter the two-letter country code here. Examples: US, CA
-			<br><input type="text" id="countryCode"> <button onclick="checkCountry()">Check</button><br>
-			<a href="about-javascript.html" rel="jslicense">JavaScript License information</a>
+			<div class="box">
+                                <h2 id="statsHere">COVID-19 Statistics Here</h2>
+                                <p id="hereNewCases"></p>
+                                <p id="hereTotalCases"></p>
+                                <p id="hereNewDeaths"></p>
+                                <p id="hereTotalDeaths"></p>
+                        </div>
+
+			<div class="box">
+				<h2>COVID-19 Statistics Worldwide</h2>
+				<p id="worldwideNewCases"></p>
+				<p id="worldwideTotalCases"></p>
+				<p id="worldwideNewDeaths"></p>
+				<p id="worldwideTotalDeaths"></p>
+			</div>
+			
+			<div class="longbox">
+				<h2>Check a specific country:</h2>
+				Enter the two-letter country code here. Examples: US, CA
+
+				<br><br><input type="text" id="countryCode"> <br>
+				<button onclick="checkCountry()">Check</button><br>
+				<br><br>
+			</div>
+
+			<div class="longbox"> 
+				<h2>COVID-19 News</h2>
+				<div id="newsbox">
+
+				</div>
+				<br><br>
+			</div>
+
+			<a href="about-javascript.html" rel="jslicense">JavaScript License information</a><br>
+			This site uses information from <a href="https://ipinfo.io">ipinfo.io</a>, <a href="https://news.google.com">Google News</a>, and <a href="https://covid19api.com">covid19api.com</a>.
 		</div>
-		
 		<script src="jquery.min.js"></script>
 		<script src="country.js"></script>
 		<script src="covidJS.js"></script>

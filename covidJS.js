@@ -40,5 +40,15 @@ $.get("https://api.covid19api.com/summary", function(data) {
 	data["Countries"].forEach(function(item, index) {
 		while(countryCode == 0) {}
 		getStats(countryCode);
-	});	
+	});
+});
+
+// Get news
+$.get("https://covid19-us-api.herokuapp.com/news", function(data) {
+	console.log(data["message"]);
+	data["message"].forEach(function(item, index) {
+		if(item["title"].includes("coronavirus")) {
+			document.getElementById("newsbox").innerHTML = document.getElementById("newsbox").innerHTML + "<br><a href=\"" + item["url"] + "\">" + item["title"] + "</a>";
+		}
+	});
 });

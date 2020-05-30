@@ -1,19 +1,39 @@
 body {
 	margin: 0;
 	color: white;
-	background-color: #242424;
+	background-color: #1a1a1a;
 	font-family: sans-serif;
 }
 
 .header {
-	background-color: #1a1a1a;
+	background-color: #242424;
 	padding: 5px;
 	padding-left: 20px;
 }
 
 .content {
 	text-align: center;
-	padding: 30px;
+	padding:6%;
+	padding-top: 2%;
 }
 
+.box {
+	padding: 10px;
+	border: 1px solid #242424;
+	border-radius: 25px;
+	width: 45%;
+	margin: 1%;
+	float: left;
+	background-color: #242424;
+}
+
+.longbox {
+	padding: 10px;
+	border: 1px solid #242424;
+	border-radius: 25px;
+	width: 94%;
+	margin: 1%;
+	float: left;
+	background-color: #242424;	
+}
 a, a:hover, a:active, a:visited { color: white; }

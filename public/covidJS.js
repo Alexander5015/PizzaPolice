@@ -1,12 +1,16 @@
 // This function is a callback for the button, it changes the local view to thatever the user wants
 function checkCountry() {
+	var newCountryCode = "US"; // default to the states in case things go wrong
+	for(var country in isoCountries) {
+		if(isoCountries[country] == document.getElementById("countryCode").value) newCountryCode = country;
+	}
 	// Put the proper country name in the local stats box
-	document.getElementById("statsHere").innerHTML = "COVID-19 Statistics in " + getCountryName(document.getElementById("countryCode").value);
+	document.getElementById("statsHere").innerHTML = "COVID-19 Statistics in " + document.getElementById("countryCode").value;
 
 	// Call the COVID-19 API to grab the info for the country the user wants to check
 	$.get("https://api.covid19api.com/summary", function(data) {
                 data["Countries"].forEach(function(item, index) {
-                        if(item["CountryCode"] == document.getElementById("countryCode").value) {
+                        if(item["CountryCode"] == newCountryCode) {
                                 var hereNew = item["NewConfirmed"];
                                 var hereTotal = item["TotalConfirmed"];
                                 var hereNewDeaths = item["NewDeaths"];
@@ -23,7 +27,7 @@ var countryCode = 0;
 $.get("https://ipinfo.io/json", function(data) {
 	countryCode = data["country"]; // Get the 2-letter country code for grabbing data from the covid API
 	document.getElementById("statsHere").innerHTML = "COVID-19 Statistics in " + getCountryName(countryCode);
-	document.getElementById("countryCode").value = countryCode;
+	//document.getElementById("countryCode").value = countryCode;
 
 	// Now that we have a country code, we can call the COVID-19 API to grab stats
 	$.get("https://api.covid19api.com/summary", function(data) {

@@ -1,3 +1,5 @@
+// Source: https://gist.github.com/maephisto/9228207
+
 var isoCountries = {
     'AF' : 'Afghanistan',
     'AX' : 'Aland Islands',

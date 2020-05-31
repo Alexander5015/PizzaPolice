@@ -14,11 +14,13 @@ app.use(express.static('public'));
 
 app.get("/", (req, res) => {
 	// Return the main page
+	res.set({'Access-Control-Allow-Origin': '*'});
 	res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
 app.get("/api/news", (req, res) => {
 	// Return all the COVID news
+	res.set({'Access-Control-Allow-Origin': '*'});
 	var options = {
 		'method': 'POST',
 		'url': 'https://covid19-us-api.herokuapp.com/news',
@@ -49,7 +51,7 @@ app.get("/api/confirm", (req, res) => {
 	// }
 	//
 	// Of course email and db don't exist, this is just a skeleton
-}
+});
 
 const httpServer = http.createServer(app);
 const httpsServer = https.createServer(credentials, app);

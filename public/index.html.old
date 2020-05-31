@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>PizzaPolice (Alpha)</title>
+		<title>CovidEngine (Alpha)</title>
 		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
-		<div class="header">CORONAVIRUS</div>
+		<div class="header">CovidEngine</div>
 		<div class="content">
-			<div class="longColorBox">
-				<h2>Get COVID-19 notifications on your phone</h2>
+			<!--<div class="longColorBox">
+				<h2>Get daily updates on COVID-19</h2>
 				<a href="/signup.html">Sign Up</a>
-			</div>
+			</div>-->
+			
+			<!-- Local statistics -->
 			<div class="box">
                                 <h2 id="statsHere">COVID-19 Statistics Here</h2>
                                 <p id="hereNewCases">Getting new cases...</p>
@@ -19,6 +21,7 @@
                                 <p id="hereTotalDeaths">Getting total deaths...</p>
                         </div>
 
+			<!-- Global statistics -->
 			<div class="box">
 				<h2>COVID-19 Statistics Worldwide</h2>
 				<p id="worldwideNewCases">Getting new cases...</p>
@@ -27,6 +30,7 @@
 				<p id="worldwideTotalDeaths">Getting total deaths...</p>
 			</div>
 			
+			<!-- Let the user switch the "local" area to a specific country -->
 			<div class="longbox">
 				<h2>Check a specific country:</h2>
 				Enter the two-letter country code here. Examples: US, CA
@@ -36,6 +40,7 @@
 				<br><br>
 			</div>
 
+			<!-- Gets california news because it was the only free API I could find for COVID news -->
 			<div class="longbox"> 
 				<h2>COVID-19 News</h2>
 				<div id="newsbox">
@@ -43,8 +48,11 @@
 				</div>
 				<br><br>
 			</div>
-
-			<a href="about-javascript.html" rel="jslicense">JavaScript License information</a><br>
+			<br>
+			
+			<!-- Footer -->
+			<a href="about-javascript.html" rel="jslicense">JavaScript License information</a> <a href="/terms.txt">Terms of Service</a> <a href="contact.html">Contact Us</a><br>
+			<br>
 			This site uses information from <a href="https://ipinfo.io">ipinfo.io</a>, <a href="https://news.google.com">Google News</a>, and <a href="https://covid19api.com">covid19api.com</a>.
 		</div>
 		<script src="jquery.min.js"></script>

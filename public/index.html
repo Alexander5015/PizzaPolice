@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	
+	<head>
+		<title>PizzaPolice (Alpha)</title>
+		<link rel="stylesheet" href="style.css">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap" rel="stylesheet"> 
+	</head>
+	
+	<body>
+		
+		<div class = "frontPage" style = "text-align: center">
+			<div class = "searchBarTitle">
+			  <h1>CovidEngine</h1>
+            </div>
+
+			<input class="searchBar" type="text" id="countryCode" size = "120" placeholder="Enter the two-letter country code here. Examples: US, CA">
+			<br>
+				<button onclick="checkCountry()">Check</button>
+			<br>
+			
+		</div>
+		
+		<div class="box">
+        	<h2 id="statsHere">COVID-19 Statistics Here</h2>
+			<p id="hereNewCases">Getting new cases...</p>
+			<p id="hereTotalCases">Getting total cases...</p>
+			<p id="hereNewDeaths">Getting new deaths...</p>
+			<p id="hereTotalDeaths">Getting total deaths...</p>
+		</div>
+		
+		<div class="box">
+			<h2>COVID-19 Statistics Worldwide</h2>
+			<p id="worldwideNewCases">Getting new cases...</p>
+			<p id="worldwideTotalCases">Getting total cases...</p>
+			<p id="worldwideNewDeaths">Getting new deaths...</p>
+			<p id="worldwideTotalDeaths">Getting total deaths...</p>
+		</div>
+		
+		<div class = "bigBox">
+			<h2>COVID-19 News</h2>
+			<br>
+			<div class="insertBox" id="newsbox">
+			
+			</div>
+			
+			<br><br>
+		</div>
+		
+		<div class = "bigBox">
+			<a href="about-javascript.html" rel="jslicense">JavaScript License information</a>
+			<a href="/terms.txt">Terms of Service</a> 
+			<a href="contact.html">Contact Us</a><br>
+			<br>
+			This site uses information from <a href="https://ipinfo.io/">ipinfo.io</a>, <a href="https://news.google.com/">Google News</a>, and <a href="https://covid19api.com/">covid19api.com</a>
+		</div>
+		
+		<script src="jquery.min.js"></script>
+		<script src="country.js"></script>
+		<script src="covidJS.js"></script>
+		
+	</body>
+</html>

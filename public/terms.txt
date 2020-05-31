@@ -1,0 +1,43 @@
+These Terms of Service (the "Terms") govern your access to and use of our services including, but not limited to, our Website 
+and APIs that link to these terms (collectively, the "Services"). By using the Services you agree to be bound by these terms.
+
+1. Privacy
+When using the Services, we may collect, and store indefinitely, personally identifiable information including, but not limited 
+to, your name, email address, account password(s), and physical location (collectively the "User Data"). We may use the User Data for
+any purpose including, but not limited to, analytics, security auditing, and improvement of the Services. We may collect and store
+information that your browser sends. This may include information such as your web request, IP address, and browser type (collectively
+the "Browser Data"). We may use the Browser Data for any purpose including, but not limited to, analytics, security auditing, and
+improvement of the Services. We will protect, to the best of our ability, all User Data and Browser Data we store, and will not 
+provide User Data or Browser Data to any third party, except where required by law. You may request, at any time, for your personal 
+information to be removed from our servers by contacting Johnny Stene requesting for your information to be removed.
+
+2. Your use of the Services
+The Services are made available for your personal, non-commercial use only. You may not use the Services to sell a product or service, 
+or to increase traffic to your Website for commercial reasons, such as advertising. If you want to make commercial use of the 
+Services, you must enter into an agreement with Johnny Stene to do so in advance. You may not send automated queries to the Services
+without express advance permission from Johnny Stene.
+
+3. Disclaimers and Limitations of Liability
+The Services are offered for informational purposes only; Johnny Stene shall not be responsible or liable for the accuracy, usefulness or 
+availability of any information transmitted or made available via the Services, and shall not be responsible or liable for any error
+or omissions in that information.
+
+We may modify or terminate the Services for any reason, and without notice, including the right to terminate with or without notice, 
+without liability to you, any other user or any third party. We reserve the right to modify these Terms of Service without notice.
+
+THE SERVICES, AND ALL MATERIALS, INFORMATION, AND SERVICES ARE PROVIDED "AS-IS," WITH NO WARRANTIES WHATSOEVER. JOHNNY STENE EXPRESSLY 
+DISCLAIMS TO THE FULLEST EXTENT PERMITTED BY LAW ALL EXPRESS, IMPLIED, AND STATUTORY WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE 
+WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT OF PROPRIETARY RIGHTS. JOHNNY STENE DISCLAIMS
+ANY WARRENTIES REGARDING THE SECURITY, RELIABILITY, TIMELINESS, AND PERFORMANCE OF THE SERVICES.
+
+YOU UNDERSTAND AND AGREE THAT YOU DOWNLOAD OR OTHERWISE OBTAIN MATERIAL THROUGH THE SERVICES AT YOUR OWN DISCRETION AND RISK THAT YOU WILL 
+BE SOLELY RESPONSIBLE FOR ANY DAMAGES TO YOUR COMPUTER SYSTEM OR LOSS OF DATA THAT RESULTS FROM THE DOWNLOAD OF SUCH MATERIAL OR DATA.
+
+SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OF IMPLIED WARRANTIES, SO THE ABOVE EXCLUSIONS MAY NOT APPLY TO YOU. YOU MAY ALSO HAVE OTHER 
+RIGHTS THAT VARY FROM JURISDICTION TO JURISDICTION.
+
+UNDER NO CIRCUMSTANCES SHALL JOHNNY STENE BE LIABLE TO ANY USER ON ACCOUNT OF THAT USER'S USE OR MISUSE OF OR RELIANCE ON THE SERVICES. 
+
+SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OR LIMITATION OF LIABILITY FOR INCIDENTAL OR CONSEQUENTIAL DAMAGES, SO THE ABOVE LIMITATIONS 
+MAY NOT APPLY TO YOU.
+	

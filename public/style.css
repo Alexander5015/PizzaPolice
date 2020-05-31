@@ -59,10 +59,11 @@ table {
 	text-align: center;
 	font-family: 'Roboto';
 	border: 3px solid white;
-    border-radius: 50px;
-    padding: 10px;
-    width: 80%;
+	border-radius: 50px;
+	padding: 10px;
+	width: 80%;
 	background-color: transparent;
+	color: white;
 }
 
 ::placeholder {
@@ -75,8 +76,8 @@ button {
 	font-family: 'Roboto';
 	color: darkcyan;
 	border: 3px solid white;
-    border-radius: 50px;
-    padding: 15px;
+	border-radius: 50px;
+	padding: 15px;
 	padding-top: 5px;
 	padding-bottom: 5px;
 	margin-top: 25px;
@@ -116,24 +117,31 @@ div {
 .box {
 	text-align: center;
 	padding: 10px;
-	width: 45%;
+	width: 38%;
 	float: left;
+	margin-left: 5%;
+	margin-right: 5%;
 }
 
 .bigBox {
+	margin-left: 4%;
+	margin-right: 5%;
 	text-align: center;
 	padding: 40px;
-	width: 90%;
+	width: 88%;
 	float: left;
 }
 
 .insertBox {
 	font-family: 'Roboto';
 	border: 3px solid grey;
-    border-radius: 50px;
+	border-radius: 40px;
 	background-color: transparent;
 	padding-top: 30px;
 	padding-bottom: 30px;
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 a, a:hover, a:active, a:visited { color: grey; }

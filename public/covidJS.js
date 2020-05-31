@@ -11,10 +11,8 @@ function checkCountry() {
                                 var hereTotal = item["TotalConfirmed"];
                                 var hereNewDeaths = item["NewDeaths"];
                                 var hereTotalDeaths = item["TotalDeaths"];
-                                document.getElementById("hereNewCases").innerHTML = hereNew + " new cases today";
-                                document.getElementById("hereTotalCases").innerHTML = hereTotal + " total cases";
-                                document.getElementById("hereNewDeaths").innerHTML = hereNewDeaths + " new deaths today";
-                                document.getElementById("hereTotalDeaths").innerHTML = hereTotalDeaths + " total deaths";
+                                document.getElementById("hereCases").innerHTML = hereNew + " new cases today (" + hereTotal + " total)";
+                                document.getElementById("hereDeaths").innerHTML = hereNewDeaths + " new deaths today (" + hereTotalDeaths + " total)";
                         }
                 });
         });
@@ -25,6 +23,7 @@ var countryCode = 0;
 $.get("https://ipinfo.io/json", function(data) {
 	countryCode = data["country"]; // Get the 2-letter country code for grabbing data from the covid API
 	document.getElementById("statsHere").innerHTML = "COVID-19 Statistics in " + getCountryName(countryCode);
+	document.getElementById("countryCode").value = countryCode;
 
 	// Now that we have a country code, we can call the COVID-19 API to grab stats
 	$.get("https://api.covid19api.com/summary", function(data) {
@@ -33,10 +32,8 @@ $.get("https://ipinfo.io/json", function(data) {
 		var worldwideTotal = data["Global"]["TotalConfirmed"];
 		var worldwideNewDeaths = data["Global"]["NewDeaths"];
 		var worldwideTotalDeaths = data["Global"]["TotalDeaths"];
-		document.getElementById("worldwideNewCases").innerHTML = worldwideNew + " new cases today";
-		document.getElementById("worldwideTotalCases").innerHTML = worldwideTotal + " total cases";
-		document.getElementById("worldwideNewDeaths").innerHTML = worldwideNewDeaths + " new deaths today";
-		document.getElementById("worldwideTotalDeaths").innerHTML = worldwideTotalDeaths + " total deaths";
+		document.getElementById("worldwideCases").innerHTML = worldwideNew + " new cases today (" + worldwideTotal + " total)";
+		document.getElementById("worldwideDeaths").innerHTML = worldwideNewDeaths + " new deaths today (" + worldwideTotalDeaths + " total)";
 
 		data["Countries"].forEach(function(item, index) { // Loop over all of them and grab the country we need
 			if(item["CountryCode"] == countryCode) {
@@ -44,10 +41,8 @@ $.get("https://ipinfo.io/json", function(data) {
 				var hereTotal = item["TotalConfirmed"];
 				var hereNewDeaths = item["NewDeaths"];
 				var hereTotalDeaths = item["TotalDeaths"];
-				document.getElementById("hereNewCases").innerHTML = hereNew + " new cases today";
-				document.getElementById("hereTotalCases").innerHTML = hereTotal + " total cases";
-				document.getElementById("hereNewDeaths").innerHTML = hereNewDeaths + " new deaths today";
-				document.getElementById("hereTotalDeaths").innerHTML = hereTotalDeaths + " total deaths";
+				document.getElementById("hereCases").innerHTML = hereNew + " new cases today (" + hereTotal + " total)";
+				document.getElementById("hereDeaths").innerHTML = hereNewDeaths + " new deaths today (" + hereTotalDeaths + " total)";
 			}
 		});
 	});
@@ -61,7 +56,7 @@ $.get("https://covidengine.ddns.net/api/news", function(data) {
 		if(item["title"].includes("coronavirus")) {
 			// This is kinda messy, but it works well enough for a prototype
 			title = item["title"].replace("<", ""); // Prevent XSS
-			document.getElementById("newsbox").innerHTML = document.getElementById("newsbox").innerHTML + "<br><a href=\"" + item["url"] + "\">" + title + "</a>";
+			document.getElementById("newsbox").innerHTML = document.getElementById("newsbox").innerHTML + "<a href=\"" + item["url"] + "\">" + title + "</a><br>";
 		}
 	});
 });

@@ -86,10 +86,11 @@ button {
 
 .frontPage {
 	padding: 15%;
-	padding-bottom: 20%;
+	padding-bottom: 40%;
 	background-image: url('images/Background.png');
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: cover;	
+	height: 120 vh;
 }
 
 h1 {
